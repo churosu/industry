@@ -1,3 +1,8 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Vanilla Industry 工業図鑑</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -278,6 +283,8 @@ a.go:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; border
 .icard table.spec td { padding: .3em 0; border-bottom: 1px solid var(--line, #dde); }
 </style>
 
+</head>
+<body>
 <header class="plate">
   <div class="wrap">
     <div class="eyebrow">Minecraft Bedrock Add-on · v4.24.3</div>
@@ -2176,7 +2183,7 @@ function fillTagBar(list) {
 }
 function renderItems() {
   return `<section class="sec" data-sec="items">
-  <div><h2>アイテム図鑑</h2><p class="lead">工業アドオンとバニラのすべてのアイテム・ブロックの一覧です。選ぶと元素の組成（物質変換で必要な元素・物質分解でもらえる元素）も出ます。選ぶと市場の売値・買値、使い方・バニラとの違い、工業アドオンのアイテムはくわしい説明と性能、入手方法・材料が出ます。タグを押すか「#タグ名」で検索すると、そのタグの付いた物にしぼれます（複数選ぶと全部に当てはまる物だけ）。材料をクリックすると、その情報が下に追加されます。</p></div>
+  <div><h2>アイテム図鑑</h2><p class="lead">工業アドオンとバニラのすべてのアイテム・ブロックの一覧です。選ぶと市場の売値・買値と元素の組成、使い方・バニラとの違い、工業アドオンのアイテムはくわしい説明と性能、入手方法・材料が出ます。タグを押すか「#タグ名」で検索すると、そのタグの付いた物にしぼれます（複数選ぶと全部に当てはまる物だけ）。材料をクリックすると、その情報が下に追加されます。</p></div>
   <div class="toolbar"><input type="search" id="it-q" placeholder="名前・ID・#タグで検索（例：#電気で動く #鉄）" value="${esc(itQ)}"><span class="count" id="it-count"></span></div>
   <div class="tagbar" id="it-tags"></div>
   <div class="it-wrap"><div class="items" id="it-list"></div><div class="it-detail" id="it-detail"></div></div>
@@ -2702,3 +2709,5 @@ document.addEventListener("click", (e) => {
 window.addEventListener("hashchange", route);
 route();
 </script>
+</body>
+</html>
